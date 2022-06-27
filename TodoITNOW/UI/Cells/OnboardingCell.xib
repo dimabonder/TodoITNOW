@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OnboardingCell" id="gTV-IL-0wX" customClass="OnboardingCell" customModule="TodoITNOW" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="247" height="306"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="247" height="306"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="task" translatesAutoresizingMaskIntoConstraints="NO" id="dH5-bH-TCJ">
+                        <rect key="frame" x="23.5" y="53" width="200" height="200"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="dH5-bH-TCJ" secondAttribute="height" multiplier="1:1" id="EwI-L9-9kg"/>
+                            <constraint firstAttribute="height" constant="200" id="pf0-Ff-JGC"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrq-dm-DJk">
+                        <rect key="frame" x="16" y="261" width="215" height="25"/>
+                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                        <color key="textColor" name="blueNeon"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="nrq-dm-DJk" firstAttribute="top" secondItem="dH5-bH-TCJ" secondAttribute="bottom" constant="8" id="2Sc-S2-Mka"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="nrq-dm-DJk" secondAttribute="bottom" constant="16" id="2eW-Yr-eDW"/>
+                <constraint firstItem="nrq-dm-DJk" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="5rH-cS-5xQ"/>
+                <constraint firstAttribute="trailing" secondItem="nrq-dm-DJk" secondAttribute="trailing" constant="16" id="Mex-s3-DiP"/>
+                <constraint firstItem="dH5-bH-TCJ" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="bSt-Y1-edr"/>
+                <constraint firstItem="nrq-dm-DJk" firstAttribute="centerX" secondItem="dH5-bH-TCJ" secondAttribute="centerX" id="prt-TU-Xxl"/>
+                <constraint firstItem="dH5-bH-TCJ" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="uMu-Jh-VrX"/>
+            </constraints>
+            <size key="customSize" width="247" height="306"/>
+            <connections>
+                <outlet property="imageView" destination="dH5-bH-TCJ" id="0O5-08-Jsz"/>
+                <outlet property="lblTitle" destination="nrq-dm-DJk" id="Z4C-U9-akZ"/>
+            </connections>
+            <point key="canvasLocation" x="693.47826086956525" y="305.35714285714283"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="task" width="512" height="512"/>
+        <namedColor name="blueNeon">
+            <color red="0.36862745098039218" green="0.68235294117647061" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>
