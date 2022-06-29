@@ -23,7 +23,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VD4-QA-Yrn">
-                    <rect key="frame" x="100" y="806" width="214" height="40"/>
+                    <rect key="frame" x="16" y="806" width="382" height="40"/>
                     <color key="backgroundColor" name="blueNeon"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="Se8-0G-8ep"/>
@@ -58,7 +58,7 @@
             <constraints>
                 <constraint firstItem="t4O-3h-rjD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="5fM-k7-Awp"/>
                 <constraint firstItem="MB4-mZ-HhU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="EdS-xz-8Fz"/>
-                <constraint firstItem="VD4-QA-Yrn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="100" id="HhG-Tj-m9o"/>
+                <constraint firstItem="VD4-QA-Yrn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="HhG-Tj-m9o"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="t4O-3h-rjD" secondAttribute="trailing" id="L4a-SL-gFq"/>
                 <constraint firstItem="VD4-QA-Yrn" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Ojd-nu-rJK"/>
                 <constraint firstItem="VD4-QA-Yrn" firstAttribute="top" secondItem="MB4-mZ-HhU" secondAttribute="bottom" constant="16" id="UW2-rh-Pwx"/>

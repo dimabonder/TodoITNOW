@@ -15,12 +15,16 @@ class OnboardingViewController: UIViewController {
     @IBOutlet weak var btnAction: UIButton!
     @IBOutlet weak var pageCntrl: UIPageControl!
     
+    private var cancellables = Set<AnyCancellable>()
+    
+    
     private let viewModel: OnboardingViewModel!
     
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCollectionView()
+        setObservers()
     }
     
     //MARK: - Methods
@@ -34,6 +38,22 @@ class OnboardingViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    private func setObservers() {
+        viewModel.$currentIndex.sink(receiveValue: { [weak self] index in
+            self?.collectionView.scrollToItem(at: IndexPath(row: index, section: 0), at: .right, animated: true)
+            self?.pageCntrl.currentPage = index
+            if index == (self?.viewModel.onBoardingDataSource.count ?? 0) - 1 {
+            self?.btnAction.setTitle("Create your tasks", for: .normal)
+            }
+        }).store(in: &cancellables)
+        
+        viewModel.$finishOnBoarding.sink(receiveValue: { [weak self] isFinished in
+            if isFinished {
+                self?.goToMainScreen()
+            }
+        }).store(in: &cancellables)
+    }
+    
     private func configureCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -41,12 +61,18 @@ class OnboardingViewController: UIViewController {
         collectionView.setCollectionViewLayout(createLayout(), animated: true)
         collectionView.alwaysBounceVertical = false
         collectionView.reloadData()
-        
+    }
+    
+    private func goToMainScreen() {
+        let mainVC = MainViewController()
+        navigationController?.pushViewController(mainVC, animated: true)
     }
     
     //MARK: - Action
     @IBAction func btnActionPressed(_ sender: UIButton) {
+        viewModel.handleNextStep()
     }
+    
     
 }
 

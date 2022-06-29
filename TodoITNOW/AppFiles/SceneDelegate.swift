@@ -18,6 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let onBoardingViewModel = OnboardingViewModel()
         let onBoardingVC = OnboardingViewController(viewModel: onBoardingViewModel)
         let rootViewController = UINavigationController(rootViewController: onBoardingVC)
+        rootViewController.isNavigationBarHidden = true
         window?.rootViewController = rootViewController
         window?.makeKeyAndVisible()
     }

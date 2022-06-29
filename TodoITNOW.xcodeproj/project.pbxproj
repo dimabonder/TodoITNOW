@@ -23,6 +23,14 @@
 		43011A47286A397400016C49 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43011A46286A397400016C49 /* OnboardingViewModel.swift */; };
 		43011A49286A3EB700016C49 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43011A48286A3EB700016C49 /* UICollectionView+Extension.swift */; };
 		43011A4B286A49E500016C49 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43011A4A286A49E500016C49 /* Onboarding.swift */; };
+		43011A50286CA0F800016C49 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43011A4E286CA0F800016C49 /* MainViewController.swift */; };
+		43011A51286CA0F800016C49 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43011A4F286CA0F800016C49 /* MainViewController.xib */; };
+		43011A55286CA4B300016C49 /* CustomTopBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43011A54286CA4B300016C49 /* CustomTopBar.xib */; };
+		43011A57286CA53800016C49 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43011A56286CA53800016C49 /* UIImageView+Extension.swift */; };
+		43011A59286CA73700016C49 /* CustomTopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43011A58286CA73700016C49 /* CustomTopBar.swift */; };
+		43011A5B286CAA8500016C49 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43011A5A286CAA8500016C49 /* UIView+Extension.swift */; };
+		43011A5D286CAEC100016C49 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43011A5C286CAEC100016C49 /* MainViewModel.swift */; };
+		43011A60286CB5AE00016C49 /* ProfilePopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43011A5F286CB5AE00016C49 /* ProfilePopupView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +52,14 @@
 		43011A46286A397400016C49 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		43011A48286A3EB700016C49 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		43011A4A286A49E500016C49 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
+		43011A4E286CA0F800016C49 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		43011A4F286CA0F800016C49 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		43011A54286CA4B300016C49 /* CustomTopBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTopBar.xib; sourceTree = "<group>"; };
+		43011A56286CA53800016C49 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		43011A58286CA73700016C49 /* CustomTopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTopBar.swift; sourceTree = "<group>"; };
+		43011A5A286CAA8500016C49 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		43011A5C286CAEC100016C49 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		43011A5F286CB5AE00016C49 /* ProfilePopupView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfilePopupView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +94,7 @@
 			children = (
 				43011A31286A347A00016C49 /* Model */,
 				43011A30286A347700016C49 /* UI */,
+				43011A52286CA49A00016C49 /* Components */,
 				43011A2F286A347000016C49 /* Extensions */,
 				43011A2E286A346A00016C49 /* SupportingFiles */,
 				43011A2D286A345F00016C49 /* AppFiles */,
@@ -113,6 +130,8 @@
 				43011A3F286A371E00016C49 /* Optional+Extension.swift */,
 				43011A41286A371E00016C49 /* UIColor+Extension.swift */,
 				43011A48286A3EB700016C49 /* UICollectionView+Extension.swift */,
+				43011A56286CA53800016C49 /* UIImageView+Extension.swift */,
+				43011A5A286CAA8500016C49 /* UIView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -120,10 +139,8 @@
 		43011A30286A347700016C49 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				43011A39286A36BA00016C49 /* Cells */,
-				43011A46286A397400016C49 /* OnboardingViewModel.swift */,
-				43011A35286A35FF00016C49 /* OnboardingViewController.swift */,
-				43011A36286A35FF00016C49 /* OnboardingViewController.xib */,
+				43011A4D286CA0CD00016C49 /* Main */,
+				43011A4C286CA0BD00016C49 /* Onboarding */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -143,6 +160,53 @@
 				43011A3B286A36DE00016C49 /* OnboardingCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		43011A4C286CA0BD00016C49 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				43011A39286A36BA00016C49 /* Cells */,
+				43011A46286A397400016C49 /* OnboardingViewModel.swift */,
+				43011A35286A35FF00016C49 /* OnboardingViewController.swift */,
+				43011A36286A35FF00016C49 /* OnboardingViewController.xib */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		43011A4D286CA0CD00016C49 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				43011A5E286CB59500016C49 /* Views */,
+				43011A5C286CAEC100016C49 /* MainViewModel.swift */,
+				43011A4E286CA0F800016C49 /* MainViewController.swift */,
+				43011A4F286CA0F800016C49 /* MainViewController.xib */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		43011A52286CA49A00016C49 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				43011A53286CA4A500016C49 /* CustomTopBar */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		43011A53286CA4A500016C49 /* CustomTopBar */ = {
+			isa = PBXGroup;
+			children = (
+				43011A54286CA4B300016C49 /* CustomTopBar.xib */,
+				43011A58286CA73700016C49 /* CustomTopBar.swift */,
+			);
+			path = CustomTopBar;
+			sourceTree = "<group>";
+		};
+		43011A5E286CB59500016C49 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				43011A5F286CB5AE00016C49 /* ProfilePopupView.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,10 +268,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				43011A3D286A36DE00016C49 /* OnboardingCell.xib in Resources */,
+				43011A51286CA0F800016C49 /* MainViewController.xib in Resources */,
 				43011A26286A345800016C49 /* LaunchScreen.storyboard in Resources */,
 				43011A34286A34AA00016C49 /* Colors.xcassets in Resources */,
 				43011A38286A35FF00016C49 /* OnboardingViewController.xib in Resources */,
+				43011A60286CB5AE00016C49 /* ProfilePopupView.xib in Resources */,
 				43011A23286A345800016C49 /* Assets.xcassets in Resources */,
+				43011A55286CA4B300016C49 /* CustomTopBar.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,9 +285,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43011A59286CA73700016C49 /* CustomTopBar.swift in Sources */,
 				43011A1A286A345600016C49 /* AppDelegate.swift in Sources */,
 				43011A43286A371E00016C49 /* Optional+Extension.swift in Sources */,
+				43011A5B286CAA8500016C49 /* UIView+Extension.swift in Sources */,
+				43011A57286CA53800016C49 /* UIImageView+Extension.swift in Sources */,
 				43011A37286A35FF00016C49 /* OnboardingViewController.swift in Sources */,
+				43011A50286CA0F800016C49 /* MainViewController.swift in Sources */,
 				43011A3C286A36DE00016C49 /* OnboardingCell.swift in Sources */,
 				43011A47286A397400016C49 /* OnboardingViewModel.swift in Sources */,
 				43011A4B286A49E500016C49 /* Onboarding.swift in Sources */,
@@ -229,6 +300,7 @@
 				43011A1C286A345600016C49 /* SceneDelegate.swift in Sources */,
 				43011A44286A371E00016C49 /* NSObject+Extension.swift in Sources */,
 				43011A45286A371E00016C49 /* UIColor+Extension.swift in Sources */,
+				43011A5D286CAEC100016C49 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

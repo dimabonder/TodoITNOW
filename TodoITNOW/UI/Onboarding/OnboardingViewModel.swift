@@ -11,6 +11,8 @@ import Combine
 class OnboardingViewModel {
     
     private(set) var onBoardingDataSource: [Onboarding] = []
+    @Published private(set) var currentIndex = 0
+    @Published private(set) var finishOnBoarding = false
     
     init() {
         getOnboardingData()
@@ -22,5 +24,14 @@ class OnboardingViewModel {
                                          Onboarding(image: "notification", title: "Let us give you an alert!")]
         
         onBoardingDataSource.append(contentsOf: onBoarding)
+    }
+    
+    func handleNextStep() {
+        if currentIndex == onBoardingDataSource.count - 1 {
+            finishOnBoarding = true
+        } else {
+            currentIndex += 1
+            print(currentIndex)
+        }
     }
 }
