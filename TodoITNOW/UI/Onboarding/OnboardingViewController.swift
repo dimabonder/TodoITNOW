@@ -72,8 +72,6 @@ class OnboardingViewController: UIViewController {
     @IBAction func btnActionPressed(_ sender: UIButton) {
         viewModel.handleNextStep()
     }
-    
-    
 }
 
 //MARK: - UICollectionViewDelegate , UICollectionViewDataSource
