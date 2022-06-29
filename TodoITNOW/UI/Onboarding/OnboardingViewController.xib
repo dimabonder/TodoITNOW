@@ -34,8 +34,8 @@
                         <color key="titleColor" name="offWhite"/>
                     </state>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                            <integer key="value" value="20"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="12"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
@@ -72,13 +72,13 @@
     </objects>
     <resources>
         <namedColor name="blueNeon">
-            <color red="0.36862745098039218" green="0.68235294117647061" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.36899998784065247" green="0.68199998140335083" blue="0.97299998998641968" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="offWhite">
-            <color red="0.97647058823529409" green="0.94901960784313721" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.97600001096725464" green="0.94900000095367432" blue="0.92900002002716064" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="orangeJuice">
-            <color red="0.95802062750000005" green="0.72231578829999998" blue="0.43914878369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.95800000429153442" green="0.72200000286102295" blue="0.43900001049041748" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
