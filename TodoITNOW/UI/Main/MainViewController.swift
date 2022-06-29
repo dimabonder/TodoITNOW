@@ -10,7 +10,6 @@ import UIKit
 class MainViewController: UIViewController {
 
     @IBOutlet weak var viewTopBar: CustomTopBar!
-    private let imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,24 +18,22 @@ class MainViewController: UIViewController {
     
     private func setDelegates() {
         viewTopBar.delegate = self
-        imagePicker.delegate = self
+    }
+    
+    private func presentProfilePopup() {
+        let profilePopupVC = ProfilePopupViewController()
+        profilePopupVC.modalPresentationStyle = .overCurrentContext
+        profilePopupVC.modalTransitionStyle = .crossDissolve
+        present(profilePopupVC, animated: true)
     }
 }
 
 //MARK: - CustomTopBar , UIImagePicker
-extension MainViewController: CustomTopBarDelegate, UIImagePickerControllerDelegate , UINavigationControllerDelegate {
+extension MainViewController: CustomTopBarDelegate {
     func didTapProfileImageViewBtn() {
-        imagePicker.allowsEditing = true
-        present(imagePicker, animated: true)
+        presentProfilePopup()
     }
     
     func didTapAddActionBtn() {
-        
-    }
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        guard let image = info[.editedImage] as? UIImage else { return }
-        self.dismiss(animated: true)
-        viewTopBar.configureUI(profileImage: image, profileName: "Your Name Here")
     }
 }

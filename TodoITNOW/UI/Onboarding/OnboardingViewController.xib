@@ -54,7 +54,7 @@
                 </pageControl>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="t4O-3h-rjD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="5fM-k7-Awp"/>
                 <constraint firstItem="MB4-mZ-HhU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="EdS-xz-8Fz"/>
