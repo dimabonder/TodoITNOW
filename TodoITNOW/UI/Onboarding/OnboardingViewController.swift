@@ -17,7 +17,6 @@ class OnboardingViewController: UIViewController {
     
     private var cancellables = Set<AnyCancellable>()
     
-    
     private let viewModel: OnboardingViewModel!
     
     //MARK: - Lifecycle
@@ -64,7 +63,12 @@ class OnboardingViewController: UIViewController {
     }
     
     private func goToMainScreen() {
-        let mainVC = MainViewController()
+        
+        guard let profileImageData = UserDefaults.standard.object(forKey: "ProfileImage") as? Data else { return }
+        guard let profileName = UserDefaults.standard.string(forKey: "ProfileName") else { return }
+        
+        let mainViewModel = MainViewModel(userProfile: .init(name: profileName, profileImage: profileImageData))
+        let mainVC = MainViewController(viewModel: mainViewModel)
         navigationController?.pushViewController(mainVC, animated: true)
     }
     

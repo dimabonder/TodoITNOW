@@ -30,6 +30,7 @@
 		43011A59286CA73700016C49 /* CustomTopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43011A58286CA73700016C49 /* CustomTopBar.swift */; };
 		43011A5B286CAA8500016C49 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43011A5A286CAA8500016C49 /* UIView+Extension.swift */; };
 		43011A5D286CAEC100016C49 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43011A5C286CAEC100016C49 /* MainViewModel.swift */; };
+		437E6B15286D017400B7F28E /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437E6B14286D017400B7F28E /* UserProfile.swift */; };
 		438F5AE5286CD79A00164978 /* ProfilePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F5AE3286CD79A00164978 /* ProfilePopupViewController.swift */; };
 		438F5AE6286CD79A00164978 /* ProfilePopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 438F5AE4286CD79A00164978 /* ProfilePopupViewController.xib */; };
 /* End PBXBuildFile section */
@@ -60,6 +61,7 @@
 		43011A58286CA73700016C49 /* CustomTopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTopBar.swift; sourceTree = "<group>"; };
 		43011A5A286CAA8500016C49 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		43011A5C286CAEC100016C49 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		437E6B14286D017400B7F28E /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		438F5AE3286CD79A00164978 /* ProfilePopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePopupViewController.swift; sourceTree = "<group>"; };
 		438F5AE4286CD79A00164978 /* ProfilePopupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfilePopupViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				43011A4A286A49E500016C49 /* Onboarding.swift */,
+				437E6B14286D017400B7F28E /* UserProfile.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				438F5AE5286CD79A00164978 /* ProfilePopupViewController.swift in Sources */,
 				43011A37286A35FF00016C49 /* OnboardingViewController.swift in Sources */,
 				43011A50286CA0F800016C49 /* MainViewController.swift in Sources */,
+				437E6B15286D017400B7F28E /* UserProfile.swift in Sources */,
 				43011A3C286A36DE00016C49 /* OnboardingCell.swift in Sources */,
 				43011A47286A397400016C49 /* OnboardingViewModel.swift in Sources */,
 				43011A4B286A49E500016C49 /* Onboarding.swift in Sources */,

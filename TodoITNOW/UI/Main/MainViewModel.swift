@@ -6,7 +6,26 @@
 //
 
 import Foundation
+import Combine
+import UIKit
 
 class MainViewModel {
+    
+    private(set) var userProfile: UserProfile
+    
+    init(userProfile: UserProfile) {
+        self.userProfile = userProfile
+    }
+    
+    func getUserImage() -> UIImage {
+        if let image = UIImage(data: userProfile.profileImage) {
+            return image
+        }
+        return UIImage()
+    }
+    
+    func getUserName() -> String {
+        return userProfile.name
+    }
     
 }

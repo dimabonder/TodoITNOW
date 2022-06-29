@@ -11,6 +11,7 @@ import Combine
 class OnboardingViewModel {
     
     private(set) var onBoardingDataSource: [Onboarding] = []
+    
     @Published private(set) var currentIndex = 0
     @Published private(set) var finishOnBoarding = false
     
@@ -31,7 +32,6 @@ class OnboardingViewModel {
             finishOnBoarding = true
         } else {
             currentIndex += 1
-            print(currentIndex)
         }
     }
 }

@@ -29,7 +29,7 @@
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" name="orangeJuice"/>
+            <color key="backgroundColor" name="offWhite"/>
             <constraints>
                 <constraint firstItem="5pC-Xg-Ao3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="1xB-XZ-w6e"/>
                 <constraint firstItem="5pC-Xg-Ao3" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="K0E-Vq-Hwn"/>
@@ -39,8 +39,8 @@
         </view>
     </objects>
     <resources>
-        <namedColor name="orangeJuice">
-            <color red="0.95800000429153442" green="0.72200000286102295" blue="0.43900001049041748" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        <namedColor name="offWhite">
+            <color red="0.97600001096725464" green="0.94900000095367432" blue="0.92900002002716064" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
