@@ -47,10 +47,20 @@ class ProfilePopupViewController: UIViewController {
 
     @IBAction func btnSavePressed(_ sender: UIButton) {
         //get the imageData and transform it to uiimage.
-        guard let imageData = UserDefaults.standard.object(forKey: "ProfileImage") as? Data else { return }
-        guard let image = UIImage(data: imageData) else { return }
+        
+        guard let imageData = UserDefaults.standard.data(forKey: "ProfileImage") else { return }
         guard let text = textField.text else { return }
-        delegate?.handleUIForSelected(image: image, profileName: text )
+        
+        do {
+            let imageDecoded = try PropertyListDecoder().decode(Data.self, from: imageData)
+            
+            if let profileImage = UIImage(data: imageDecoded) {
+                delegate?.handleUIForSelected(image: profileImage, profileName: text)
+            }
+        }
+        catch {
+            print("Couldn't decode data and convert it to UIImage")
+        }
         dismiss(animated: true)
     }
 }
@@ -58,11 +68,20 @@ class ProfilePopupViewController: UIViewController {
 extension ProfilePopupViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         guard let image = info[.editedImage] as? UIImage else { return }
+        
         viewSucces.isHidden = false
+        
         self.dismiss(animated: true)
         //convert image selected to data and store it in userDefualts.
-        let imageData = image.pngData()
-        UserDefaults.standard.set(imageData, forKey: "ProfileImage")
+        guard let imageData = image.jpegData(compressionQuality: 0.5) else { return }
+        
+        do {
+            let imageEncoded = try PropertyListEncoder().encode(imageData)
+            UserDefaults.standard.set(imageEncoded, forKey: "ProfileImage")
+        }
+        catch {
+            print("Couldn't encode image ")
+        }
     }
 }
 

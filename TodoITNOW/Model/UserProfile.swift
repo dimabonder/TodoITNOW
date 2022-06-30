@@ -7,12 +7,7 @@
 
 import Foundation
 
-class UserProfile {
+struct UserProfile {
     let name: String
     let profileImage: Data
-    
-    init(name: String, profileImage: Data) {
-        self.name = name
-        self.profileImage = profileImage
-    }
 }

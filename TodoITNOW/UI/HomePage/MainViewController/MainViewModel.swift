@@ -10,9 +10,6 @@ import Combine
 import UIKit
 
 class MainViewModel {
-    
-    init() {
-    }
-    
+
 }
 

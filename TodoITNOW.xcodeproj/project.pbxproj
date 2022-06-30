@@ -33,10 +33,17 @@
 		437E6B15286D017400B7F28E /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437E6B14286D017400B7F28E /* UserProfile.swift */; };
 		438F5AE5286CD79A00164978 /* ProfilePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F5AE3286CD79A00164978 /* ProfilePopupViewController.swift */; };
 		438F5AE6286CD79A00164978 /* ProfilePopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 438F5AE4286CD79A00164978 /* ProfilePopupViewController.xib */; };
+		43B2B298286E5B0100192681 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 43B2B297286E5B0100192681 /* GoogleService-Info.plist */; };
+		43B2B29B286E5CB700192681 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 43B2B29A286E5CB700192681 /* FirebaseAuth */; };
+		43B2B29D286E5CB700192681 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 43B2B29C286E5CB700192681 /* FirebaseAuthCombine-Community */; };
+		43B2B29F286E5CB700192681 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 43B2B29E286E5CB700192681 /* FirebaseCrashlytics */; };
+		43B2B2A1286E5CB700192681 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 43B2B2A0286E5CB700192681 /* FirebaseDatabase */; };
+		43B2B2A3286E5CB700192681 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 43B2B2A2286E5CB700192681 /* FirebaseDatabaseSwift */; };
+		43B2B2A5286E5CB700192681 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 43B2B2A4286E5CB700192681 /* FirebaseFirestore */; };
+		43B2B2A7286E5CB700192681 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 43B2B2A6286E5CB700192681 /* FirebaseFirestoreSwift */; };
+		43B2B2A9286E5CB700192681 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 43B2B2A8286E5CB700192681 /* FirebaseStorage */; };
 		74A2DCF6286DC3EF00CF8812 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 74A2DCF5286DC3EF00CF8812 /* Kingfisher */; };
 		74DFE951286DC91C00F2C96B /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 74DFE950286DC91C00F2C96B /* IQKeyboardManagerSwift */; };
-		74DFE954286DD48000F2C96B /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 74DFE953286DD48000F2C96B /* Realm */; };
-		74DFE956286DD48000F2C96B /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 74DFE955286DD48000F2C96B /* RealmSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +75,7 @@
 		437E6B14286D017400B7F28E /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		438F5AE3286CD79A00164978 /* ProfilePopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePopupViewController.swift; sourceTree = "<group>"; };
 		438F5AE4286CD79A00164978 /* ProfilePopupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfilePopupViewController.xib; sourceTree = "<group>"; };
+		43B2B297286E5B0100192681 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,9 +83,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74DFE956286DD48000F2C96B /* RealmSwift in Frameworks */,
-				74DFE954286DD48000F2C96B /* Realm in Frameworks */,
+				43B2B29D286E5CB700192681 /* FirebaseAuthCombine-Community in Frameworks */,
+				43B2B29B286E5CB700192681 /* FirebaseAuth in Frameworks */,
+				43B2B2A5286E5CB700192681 /* FirebaseFirestore in Frameworks */,
+				43B2B2A3286E5CB700192681 /* FirebaseDatabaseSwift in Frameworks */,
+				43B2B2A9286E5CB700192681 /* FirebaseStorage in Frameworks */,
+				43B2B2A7286E5CB700192681 /* FirebaseFirestoreSwift in Frameworks */,
+				43B2B29F286E5CB700192681 /* FirebaseCrashlytics in Frameworks */,
 				74A2DCF6286DC3EF00CF8812 /* Kingfisher in Frameworks */,
+				43B2B2A1286E5CB700192681 /* FirebaseDatabase in Frameworks */,
 				74DFE951286DC91C00F2C96B /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -109,6 +123,7 @@
 				43011A52286CA49A00016C49 /* Components */,
 				43011A2F286A347000016C49 /* Extensions */,
 				43011A2E286A346A00016C49 /* SupportingFiles */,
+				43B2B296286E5AEF00192681 /* ConfigFiles */,
 				43011A2D286A345F00016C49 /* AppFiles */,
 				43011A27286A345800016C49 /* Info.plist */,
 			);
@@ -221,6 +236,14 @@
 			path = ProfilePopupViewController;
 			sourceTree = "<group>";
 		};
+		43B2B296286E5AEF00192681 /* ConfigFiles */ = {
+			isa = PBXGroup;
+			children = (
+				43B2B297286E5B0100192681 /* GoogleService-Info.plist */,
+			);
+			path = ConfigFiles;
+			sourceTree = "<group>";
+		};
 		74DFE94E286DC7E600F2C96B /* MainViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,8 +273,14 @@
 			packageProductDependencies = (
 				74A2DCF5286DC3EF00CF8812 /* Kingfisher */,
 				74DFE950286DC91C00F2C96B /* IQKeyboardManagerSwift */,
-				74DFE953286DD48000F2C96B /* Realm */,
-				74DFE955286DD48000F2C96B /* RealmSwift */,
+				43B2B29A286E5CB700192681 /* FirebaseAuth */,
+				43B2B29C286E5CB700192681 /* FirebaseAuthCombine-Community */,
+				43B2B29E286E5CB700192681 /* FirebaseCrashlytics */,
+				43B2B2A0286E5CB700192681 /* FirebaseDatabase */,
+				43B2B2A2286E5CB700192681 /* FirebaseDatabaseSwift */,
+				43B2B2A4286E5CB700192681 /* FirebaseFirestore */,
+				43B2B2A6286E5CB700192681 /* FirebaseFirestoreSwift */,
+				43B2B2A8286E5CB700192681 /* FirebaseStorage */,
 			);
 			productName = TodoITNOW;
 			productReference = 43011A16286A345600016C49 /* TodoITNOW.app */;
@@ -284,7 +313,7 @@
 			packageReferences = (
 				74A2DCF4286DC3EF00CF8812 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				74DFE94F286DC91C00F2C96B /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
-				74DFE952286DD48000F2C96B /* XCRemoteSwiftPackageReference "realm-swift" */,
+				43B2B299286E5CB700192681 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 43011A17286A345600016C49 /* Products */;
 			projectDirPath = "";
@@ -302,6 +331,7 @@
 			files = (
 				43011A3D286A36DE00016C49 /* OnboardingCell.xib in Resources */,
 				43011A51286CA0F800016C49 /* MainViewController.xib in Resources */,
+				43B2B298286E5B0100192681 /* GoogleService-Info.plist in Resources */,
 				43011A26286A345800016C49 /* LaunchScreen.storyboard in Resources */,
 				43011A34286A34AA00016C49 /* Colors.xcassets in Resources */,
 				43011A38286A35FF00016C49 /* OnboardingViewController.xib in Resources */,
@@ -547,6 +577,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		43B2B299286E5CB700192681 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
 		74A2DCF4286DC3EF00CF8812 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
@@ -563,17 +601,49 @@
 				kind = branch;
 			};
 		};
-		74DFE952286DD48000F2C96B /* XCRemoteSwiftPackageReference "realm-swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/realm-swift.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		43B2B29A286E5CB700192681 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 43B2B299286E5CB700192681 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		43B2B29C286E5CB700192681 /* FirebaseAuthCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 43B2B299286E5CB700192681 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAuthCombine-Community";
+		};
+		43B2B29E286E5CB700192681 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 43B2B299286E5CB700192681 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		43B2B2A0286E5CB700192681 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 43B2B299286E5CB700192681 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		43B2B2A2286E5CB700192681 /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 43B2B299286E5CB700192681 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
+		};
+		43B2B2A4286E5CB700192681 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 43B2B299286E5CB700192681 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		43B2B2A6286E5CB700192681 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 43B2B299286E5CB700192681 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		43B2B2A8286E5CB700192681 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 43B2B299286E5CB700192681 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
 		74A2DCF5286DC3EF00CF8812 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 74A2DCF4286DC3EF00CF8812 /* XCRemoteSwiftPackageReference "Kingfisher" */;
@@ -583,16 +653,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 74DFE94F286DC91C00F2C96B /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
 			productName = IQKeyboardManagerSwift;
-		};
-		74DFE953286DD48000F2C96B /* Realm */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 74DFE952286DD48000F2C96B /* XCRemoteSwiftPackageReference "realm-swift" */;
-			productName = Realm;
-		};
-		74DFE955286DD48000F2C96B /* RealmSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 74DFE952286DD48000F2C96B /* XCRemoteSwiftPackageReference "realm-swift" */;
-			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
