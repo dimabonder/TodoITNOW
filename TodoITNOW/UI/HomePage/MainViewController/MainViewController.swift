@@ -20,7 +20,6 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setDelegates()
-        setupUI()
     }
     
     init(viewModel: MainViewModel) {
@@ -43,10 +42,6 @@ class MainViewController: UIViewController {
         createProfileVC.modalPresentationStyle = .popover
         createProfileVC.modalTransitionStyle = .coverVertical
         present(createProfileVC, animated: true)
-    }
-    
-    private func setupUI() {
-        viewTopBar.configureUI(profileImage: viewModel.getUserImage(), profileName: viewModel.profileName)
     }
     
     //MARK: - Actions

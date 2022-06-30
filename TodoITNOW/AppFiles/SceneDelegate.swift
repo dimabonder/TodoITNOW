@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -15,6 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         self.window = UIWindow(windowScene: windowScene)
+        IQKeyboardManager.shared.enable = true
         let onBoardingViewModel = OnboardingViewModel()
         let onBoardingVC = OnboardingViewController(viewModel: onBoardingViewModel)
         let rootViewController = UINavigationController(rootViewController: onBoardingVC)

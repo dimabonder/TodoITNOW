@@ -33,6 +33,8 @@
 		437E6B15286D017400B7F28E /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437E6B14286D017400B7F28E /* UserProfile.swift */; };
 		438F5AE5286CD79A00164978 /* ProfilePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F5AE3286CD79A00164978 /* ProfilePopupViewController.swift */; };
 		438F5AE6286CD79A00164978 /* ProfilePopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 438F5AE4286CD79A00164978 /* ProfilePopupViewController.xib */; };
+		74A2DCF6286DC3EF00CF8812 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 74A2DCF5286DC3EF00CF8812 /* Kingfisher */; };
+		74DFE951286DC91C00F2C96B /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 74DFE950286DC91C00F2C96B /* IQKeyboardManagerSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +73,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74A2DCF6286DC3EF00CF8812 /* Kingfisher in Frameworks */,
+				74DFE951286DC91C00F2C96B /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,7 +147,7 @@
 		43011A30286A347700016C49 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				43011A4D286CA0CD00016C49 /* Main */,
+				43011A4D286CA0CD00016C49 /* HomePage */,
 				43011A4C286CA0BD00016C49 /* Onboarding */,
 			);
 			path = UI;
@@ -178,15 +182,13 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
-		43011A4D286CA0CD00016C49 /* Main */ = {
+		43011A4D286CA0CD00016C49 /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
+				74DFE94E286DC7E600F2C96B /* MainViewController */,
 				43011A5E286CB59500016C49 /* ProfilePopupViewController */,
-				43011A5C286CAEC100016C49 /* MainViewModel.swift */,
-				43011A4E286CA0F800016C49 /* MainViewController.swift */,
-				43011A4F286CA0F800016C49 /* MainViewController.xib */,
 			);
-			path = Main;
+			path = HomePage;
 			sourceTree = "<group>";
 		};
 		43011A52286CA49A00016C49 /* Components */ = {
@@ -215,6 +217,16 @@
 			path = ProfilePopupViewController;
 			sourceTree = "<group>";
 		};
+		74DFE94E286DC7E600F2C96B /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				43011A5C286CAEC100016C49 /* MainViewModel.swift */,
+				43011A4E286CA0F800016C49 /* MainViewController.swift */,
+				43011A4F286CA0F800016C49 /* MainViewController.xib */,
+			);
+			path = MainViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -231,6 +243,10 @@
 			dependencies = (
 			);
 			name = TodoITNOW;
+			packageProductDependencies = (
+				74A2DCF5286DC3EF00CF8812 /* Kingfisher */,
+				74DFE950286DC91C00F2C96B /* IQKeyboardManagerSwift */,
+			);
 			productName = TodoITNOW;
 			productReference = 43011A16286A345600016C49 /* TodoITNOW.app */;
 			productType = "com.apple.product-type.application";
@@ -259,6 +275,10 @@
 				Base,
 			);
 			mainGroup = 43011A0D286A345600016C49;
+			packageReferences = (
+				74A2DCF4286DC3EF00CF8812 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				74DFE94F286DC91C00F2C96B /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+			);
 			productRefGroup = 43011A17286A345600016C49 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -518,6 +538,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		74A2DCF4286DC3EF00CF8812 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		74DFE94F286DC91C00F2C96B /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		74A2DCF5286DC3EF00CF8812 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 74A2DCF4286DC3EF00CF8812 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		74DFE950286DC91C00F2C96B /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 74DFE94F286DC91C00F2C96B /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 43011A0E286A345600016C49 /* Project object */;
 }

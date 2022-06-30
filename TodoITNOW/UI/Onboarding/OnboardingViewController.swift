@@ -64,10 +64,7 @@ class OnboardingViewController: UIViewController {
     
     private func goToMainScreen() {
         
-        guard let profileImageData = UserDefaults.standard.object(forKey: "ProfileImage") as? Data else { return }
-        guard let profileName = UserDefaults.standard.string(forKey: "ProfileName") else { return }
-        
-        let mainViewModel = MainViewModel(userProfile: .init(name: profileName, profileImage: profileImageData))
+        let mainViewModel = MainViewModel()
         let mainVC = MainViewController(viewModel: mainViewModel)
         
         navigationController?.pushViewController(mainVC, animated: true)
@@ -88,8 +85,10 @@ extension OnboardingViewController: UICollectionViewDelegate, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OnboardingCell", for: indexPath) as? OnboardingCell else { return UICollectionViewCell()}
+        
         let image = viewModel.onBoardingDataSource[indexPath.row].image
         let titleForImage = viewModel.onBoardingDataSource[indexPath.row].title
+        
         cell.configureUI(imageName: image, title: titleForImage)
         return cell
     }

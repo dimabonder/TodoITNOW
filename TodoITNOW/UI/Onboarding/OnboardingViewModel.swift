@@ -10,15 +10,18 @@ import Combine
 
 class OnboardingViewModel {
     
+    //MARK: - Properties
     private(set) var onBoardingDataSource: [Onboarding] = []
     
     @Published private(set) var currentIndex = 0
     @Published private(set) var finishOnBoarding = false
 
+    //MARK: - Initializer
     init() {
         getOnboardingData()
     }
     
+    //MARK: - Method
     private func getOnboardingData() {
         let onBoarding: [Onboarding] = [Onboarding(image: "task", title: "Add your tasks to manage your daily schedule"),
                                          Onboarding(image: "calendar", title: "Choose your date and time"),
@@ -35,3 +38,4 @@ class OnboardingViewModel {
         }
     }
 }
+

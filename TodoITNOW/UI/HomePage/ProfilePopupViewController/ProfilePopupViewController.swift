@@ -7,6 +7,7 @@
 
 import UIKit
 import Combine
+import IQKeyboardManagerSwift
 
 protocol ProfilePopupViewControllerDelegate: AnyObject {
     func handleUIForSelected(image: UIImage, profileName: String)
@@ -36,6 +37,7 @@ class ProfilePopupViewController: UIViewController {
         imagePicker.delegate = self
         imagePicker.allowsEditing = true
         textField.delegate = self
+        IQKeyboardManager.shared.shouldResignOnTouchOutside = true
     }
     
     //MARK: - Actions
