@@ -69,6 +69,7 @@ class OnboardingViewController: UIViewController {
         
         let mainViewModel = MainViewModel(userProfile: .init(name: profileName, profileImage: profileImageData))
         let mainVC = MainViewController(viewModel: mainViewModel)
+        
         navigationController?.pushViewController(mainVC, animated: true)
     }
     

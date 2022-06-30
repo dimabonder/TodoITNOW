@@ -55,10 +55,7 @@ class ProfilePopupViewController: UIViewController {
 
 extension ProfilePopupViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        guard let image = info[.editedImage] as? UIImage else {
-            viewSucces.isHidden = true
-            return
-        }
+        guard let image = info[.editedImage] as? UIImage else { return }
         viewSucces.isHidden = false
         self.dismiss(animated: true)
         //convert image selected to data and store it in userDefualts.

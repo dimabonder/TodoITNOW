@@ -23,9 +23,10 @@ class MainViewModel {
         }
         return UIImage()
     }
-    
-    func getUserName() -> String {
-        return userProfile.name
+}
+
+extension MainViewModel {
+    var profileName: String {
+        userProfile.name
     }
-    
 }

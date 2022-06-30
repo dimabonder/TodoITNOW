@@ -37,16 +37,16 @@ class MainViewController: UIViewController {
         viewTopBar.delegate = self
     }
 
-    private func presentProfilePopup() {
-        let profilePopupVC = ProfilePopupViewController()
-        profilePopupVC.delegate = self
-        profilePopupVC.modalPresentationStyle = .popover
-        profilePopupVC.modalTransitionStyle = .coverVertical
-        present(profilePopupVC, animated: true)
+    private func gotoCreateProfileVC() {
+        let createProfileVC = ProfilePopupViewController()
+        createProfileVC.delegate = self
+        createProfileVC.modalPresentationStyle = .popover
+        createProfileVC.modalTransitionStyle = .coverVertical
+        present(createProfileVC, animated: true)
     }
     
     private func setupUI() {
-        viewTopBar.configureUI(profileImage: viewModel.getUserImage(), profileName: viewModel.getUserName())
+        viewTopBar.configureUI(profileImage: viewModel.getUserImage(), profileName: viewModel.profileName)
     }
     
     //MARK: - Actions
@@ -56,7 +56,7 @@ class MainViewController: UIViewController {
 //MARK: - CustomTopBar , UIImagePicker
 extension MainViewController: CustomTopBarDelegate {
     func didTapProfileImageViewBtn() {
-        presentProfilePopup()
+        gotoCreateProfileVC()
     }
     
     func didTapAddActionBtn() {

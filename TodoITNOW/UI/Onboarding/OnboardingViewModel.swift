@@ -14,7 +14,7 @@ class OnboardingViewModel {
     
     @Published private(set) var currentIndex = 0
     @Published private(set) var finishOnBoarding = false
-    
+
     init() {
         getOnboardingData()
     }
