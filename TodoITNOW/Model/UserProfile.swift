@@ -8,6 +8,6 @@
 import Foundation
 
 struct UserProfile {
-    let name: String
-    let profileImage: Data
+    var name: String
+    var profileImage: Data
 }

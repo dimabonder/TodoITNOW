@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseCore
 import IQKeyboardManagerSwift
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -17,6 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         self.window = UIWindow(windowScene: windowScene)
         IQKeyboardManager.shared.enable = true
+        FirebaseApp.configure()
         let onBoardingViewModel = OnboardingViewModel()
         let onBoardingVC = OnboardingViewController(viewModel: onBoardingViewModel)
         let rootViewController = UINavigationController(rootViewController: onBoardingVC)
