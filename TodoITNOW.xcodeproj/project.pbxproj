@@ -35,6 +35,8 @@
 		438F5AE6286CD79A00164978 /* ProfilePopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 438F5AE4286CD79A00164978 /* ProfilePopupViewController.xib */; };
 		74A2DCF6286DC3EF00CF8812 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 74A2DCF5286DC3EF00CF8812 /* Kingfisher */; };
 		74DFE951286DC91C00F2C96B /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 74DFE950286DC91C00F2C96B /* IQKeyboardManagerSwift */; };
+		74DFE954286DD48000F2C96B /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 74DFE953286DD48000F2C96B /* Realm */; };
+		74DFE956286DD48000F2C96B /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 74DFE955286DD48000F2C96B /* RealmSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +75,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74DFE956286DD48000F2C96B /* RealmSwift in Frameworks */,
+				74DFE954286DD48000F2C96B /* Realm in Frameworks */,
 				74A2DCF6286DC3EF00CF8812 /* Kingfisher in Frameworks */,
 				74DFE951286DC91C00F2C96B /* IQKeyboardManagerSwift in Frameworks */,
 			);
@@ -246,6 +250,8 @@
 			packageProductDependencies = (
 				74A2DCF5286DC3EF00CF8812 /* Kingfisher */,
 				74DFE950286DC91C00F2C96B /* IQKeyboardManagerSwift */,
+				74DFE953286DD48000F2C96B /* Realm */,
+				74DFE955286DD48000F2C96B /* RealmSwift */,
 			);
 			productName = TodoITNOW;
 			productReference = 43011A16286A345600016C49 /* TodoITNOW.app */;
@@ -278,6 +284,7 @@
 			packageReferences = (
 				74A2DCF4286DC3EF00CF8812 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				74DFE94F286DC91C00F2C96B /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				74DFE952286DD48000F2C96B /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = 43011A17286A345600016C49 /* Products */;
 			projectDirPath = "";
@@ -556,6 +563,14 @@
 				kind = branch;
 			};
 		};
+		74DFE952286DD48000F2C96B /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -568,6 +583,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 74DFE94F286DC91C00F2C96B /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
 			productName = IQKeyboardManagerSwift;
+		};
+		74DFE953286DD48000F2C96B /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 74DFE952286DD48000F2C96B /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		74DFE955286DD48000F2C96B /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 74DFE952286DD48000F2C96B /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
