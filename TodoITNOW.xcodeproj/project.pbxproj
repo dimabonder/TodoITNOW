@@ -33,6 +33,8 @@
 		437E6B15286D017400B7F28E /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437E6B14286D017400B7F28E /* UserProfile.swift */; };
 		438F5AE5286CD79A00164978 /* ProfilePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F5AE3286CD79A00164978 /* ProfilePopupViewController.swift */; };
 		438F5AE6286CD79A00164978 /* ProfilePopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 438F5AE4286CD79A00164978 /* ProfilePopupViewController.xib */; };
+		43B2B293286E425C00192681 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B2B292286E425C00192681 /* Task.swift */; };
+		43B2B295286E473700192681 /* ProfilePopupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B2B294286E473700192681 /* ProfilePopupViewModel.swift */; };
 		74A2DCF6286DC3EF00CF8812 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 74A2DCF5286DC3EF00CF8812 /* Kingfisher */; };
 		74DFE951286DC91C00F2C96B /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 74DFE950286DC91C00F2C96B /* IQKeyboardManagerSwift */; };
 		74DFE954286DD48000F2C96B /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 74DFE953286DD48000F2C96B /* Realm */; };
@@ -68,6 +70,8 @@
 		437E6B14286D017400B7F28E /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		438F5AE3286CD79A00164978 /* ProfilePopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePopupViewController.swift; sourceTree = "<group>"; };
 		438F5AE4286CD79A00164978 /* ProfilePopupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfilePopupViewController.xib; sourceTree = "<group>"; };
+		43B2B292286E425C00192681 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		43B2B294286E473700192681 /* ProfilePopupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePopupViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +166,7 @@
 			children = (
 				43011A4A286A49E500016C49 /* Onboarding.swift */,
 				437E6B14286D017400B7F28E /* UserProfile.swift */,
+				43B2B292286E425C00192681 /* Task.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -215,6 +220,7 @@
 		43011A5E286CB59500016C49 /* ProfilePopupViewController */ = {
 			isa = PBXGroup;
 			children = (
+				43B2B294286E473700192681 /* ProfilePopupViewModel.swift */,
 				438F5AE3286CD79A00164978 /* ProfilePopupViewController.swift */,
 				438F5AE4286CD79A00164978 /* ProfilePopupViewController.xib */,
 			);
@@ -325,9 +331,11 @@
 				43011A57286CA53800016C49 /* UIImageView+Extension.swift in Sources */,
 				438F5AE5286CD79A00164978 /* ProfilePopupViewController.swift in Sources */,
 				43011A37286A35FF00016C49 /* OnboardingViewController.swift in Sources */,
+				43B2B293286E425C00192681 /* Task.swift in Sources */,
 				43011A50286CA0F800016C49 /* MainViewController.swift in Sources */,
 				437E6B15286D017400B7F28E /* UserProfile.swift in Sources */,
 				43011A3C286A36DE00016C49 /* OnboardingCell.swift in Sources */,
+				43B2B295286E473700192681 /* ProfilePopupViewModel.swift in Sources */,
 				43011A47286A397400016C49 /* OnboardingViewModel.swift in Sources */,
 				43011A4B286A49E500016C49 /* Onboarding.swift in Sources */,
 				43011A42286A371E00016C49 /* CustomXib.swift in Sources */,
