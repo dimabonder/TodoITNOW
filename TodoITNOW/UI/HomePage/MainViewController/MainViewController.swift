@@ -20,6 +20,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setDelegates()
+        loadUserIfExist()
     }
     
     init(viewModel: MainViewModel) {
@@ -36,6 +37,22 @@ class MainViewController: UIViewController {
         viewTopBar.delegate = self
     }
 
+    private func loadUserIfExist() {
+        guard let imageData = UserDefaults.standard.data(forKey: "ProfileImage") else { return }
+        guard let text = UserDefaults.standard.string(forKey: "ProfileName") else { return }
+        
+        do {
+            let imageDecoded = try PropertyListDecoder().decode(Data.self, from: imageData)
+            
+            if let profileImage = UIImage(data: imageDecoded) {
+                viewTopBar.configureUI(profileImage: profileImage, profileName: text)
+            }
+        }
+        catch {
+            print("Couldn't decode data and convert it to UIImage")
+        }
+    }
+    
     private func gotoCreateProfileVC() {
         let createProfileVC = ProfilePopupViewController()
         createProfileVC.delegate = self

@@ -13,7 +13,7 @@ protocol ProfilePopupViewControllerDelegate: AnyObject {
 }
 
 class ProfilePopupViewController: UIViewController {
-
+    
     //MARK: - Outlets
     @IBOutlet weak var viewEditImage: UIImageView!
     @IBOutlet weak var viewSucces: UIView!
@@ -39,16 +39,10 @@ class ProfilePopupViewController: UIViewController {
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
     }
     
-    //MARK: - Actions
-    @IBAction func btnAddImagePressed(_ sender: UIButton) {
-        present(imagePicker, animated: true)
-    }
-
-    @IBAction func btnSavePressed(_ sender: UIButton) {
-        //get the imageData and transform it to uiimage.
-        
+    private func saveUserInfo() {
         guard let imageData = UserDefaults.standard.data(forKey: "ProfileImage") else { return }
         guard let text = textField.text else { return }
+        UserDefaults.standard.set(text, forKey: "ProfileName")
         
         do {
             let imageDecoded = try PropertyListDecoder().decode(Data.self, from: imageData)
@@ -62,26 +56,36 @@ class ProfilePopupViewController: UIViewController {
         }
         dismiss(animated: true)
     }
-}
-
-extension ProfilePopupViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        guard let image = info[.editedImage] as? UIImage else { return }
-        
-        viewSucces.isHidden = false
-        
-        self.dismiss(animated: true)
-        //convert image selected to data and store it in userDefualts.
-        guard let imageData = image.jpegData(compressionQuality: 0.5) else { return }
-        
-        do {
-            let imageEncoded = try PropertyListEncoder().encode(imageData)
-            UserDefaults.standard.set(imageEncoded, forKey: "ProfileImage")
-        }
-        catch {
-            print("Couldn't encode image ")
-        }
+    
+    //MARK: - Actions
+    @IBAction func btnAddImagePressed(_ sender: UIButton) {
+        present(imagePicker, animated: true)
+    }
+    
+    @IBAction func btnSavePressed(_ sender: UIButton) {
+        saveUserInfo()
     }
 }
-
-extension ProfilePopupViewController: UITextFieldDelegate {}
+    
+extension ProfilePopupViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+        func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+            
+            guard let image = info[.editedImage] as? UIImage else { return }
+            
+            viewSucces.isHidden = false
+            
+            self.dismiss(animated: true)
+            //convert image selected to data and store it in userDefualts.
+            guard let imageData = image.jpegData(compressionQuality: 0.5) else { return }
+            
+            do {
+                let imageEncoded = try PropertyListEncoder().encode(imageData)
+                UserDefaults.standard.set(imageEncoded, forKey: "ProfileImage")
+            }
+            catch {
+                print("Couldn't encode image ")
+            }
+        }
+    }
+    
+    extension ProfilePopupViewController: UITextFieldDelegate {}
