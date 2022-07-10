@@ -20,7 +20,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setDelegates()
-        loadUserIfExist()
+        loadUserProfile()
     }
     
     init(viewModel: MainViewModel) {
@@ -37,7 +37,7 @@ class MainViewController: UIViewController {
         viewTopBar.delegate = self
     }
 
-    private func loadUserIfExist() {
+    private func loadUserProfile() {
         guard let imageData = UserDefaults.standard.data(forKey: "ProfileImage") else { return }
         guard let text = UserDefaults.standard.string(forKey: "ProfileName") else { return }
         
@@ -60,9 +60,6 @@ class MainViewController: UIViewController {
         createProfileVC.modalTransitionStyle = .coverVertical
         present(createProfileVC, animated: true)
     }
-    
-    //MARK: - Actions
-    
 }
 
 //MARK: - CustomTopBar , UIImagePicker

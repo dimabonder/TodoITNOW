@@ -43,6 +43,11 @@
 		43B2B2A7286E5CB700192681 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 43B2B2A6286E5CB700192681 /* FirebaseFirestoreSwift */; };
 		43B2B2A9286E5CB700192681 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 43B2B2A8286E5CB700192681 /* FirebaseStorage */; };
 		74A2DCF6286DC3EF00CF8812 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 74A2DCF5286DC3EF00CF8812 /* Kingfisher */; };
+		74CAF61B287B6AB000728B56 /* ProfilePopupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CAF61A287B6AB000728B56 /* ProfilePopupViewModel.swift */; };
+		74CAF61F287B6C4B00728B56 /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CAF61D287B6C4B00728B56 /* TodoListViewController.swift */; };
+		74CAF620287B6C4B00728B56 /* TodoListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74CAF61E287B6C4B00728B56 /* TodoListViewController.xib */; };
+		74CAF622287B6D0C00728B56 /* CustomTitleTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CAF621287B6D0C00728B56 /* CustomTitleTextField.swift */; };
+		74CAF625287B6D2800728B56 /* CustomTitleTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74CAF624287B6D2800728B56 /* CustomTitleTextField.xib */; };
 		74DFE951286DC91C00F2C96B /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 74DFE950286DC91C00F2C96B /* IQKeyboardManagerSwift */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +81,11 @@
 		438F5AE3286CD79A00164978 /* ProfilePopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePopupViewController.swift; sourceTree = "<group>"; };
 		438F5AE4286CD79A00164978 /* ProfilePopupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfilePopupViewController.xib; sourceTree = "<group>"; };
 		43B2B297286E5B0100192681 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		74CAF61A287B6AB000728B56 /* ProfilePopupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePopupViewModel.swift; sourceTree = "<group>"; };
+		74CAF61D287B6C4B00728B56 /* TodoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
+		74CAF61E287B6C4B00728B56 /* TodoListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodoListViewController.xib; sourceTree = "<group>"; };
+		74CAF621287B6D0C00728B56 /* CustomTitleTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTitleTextField.swift; sourceTree = "<group>"; };
+		74CAF624287B6D2800728B56 /* CustomTitleTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTitleTextField.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +214,7 @@
 		43011A4D286CA0CD00016C49 /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
+				74CAF61C287B6B4900728B56 /* TodoListViewController */,
 				74DFE94E286DC7E600F2C96B /* MainViewController */,
 				43011A5E286CB59500016C49 /* ProfilePopupViewController */,
 			);
@@ -214,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				43011A53286CA4A500016C49 /* CustomTopBar */,
+				74CAF623287B6D1900728B56 /* CustomTitleTextField */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -230,6 +242,7 @@
 		43011A5E286CB59500016C49 /* ProfilePopupViewController */ = {
 			isa = PBXGroup;
 			children = (
+				74CAF61A287B6AB000728B56 /* ProfilePopupViewModel.swift */,
 				438F5AE3286CD79A00164978 /* ProfilePopupViewController.swift */,
 				438F5AE4286CD79A00164978 /* ProfilePopupViewController.xib */,
 			);
@@ -242,6 +255,24 @@
 				43B2B297286E5B0100192681 /* GoogleService-Info.plist */,
 			);
 			path = ConfigFiles;
+			sourceTree = "<group>";
+		};
+		74CAF61C287B6B4900728B56 /* TodoListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				74CAF61D287B6C4B00728B56 /* TodoListViewController.swift */,
+				74CAF61E287B6C4B00728B56 /* TodoListViewController.xib */,
+			);
+			path = TodoListViewController;
+			sourceTree = "<group>";
+		};
+		74CAF623287B6D1900728B56 /* CustomTitleTextField */ = {
+			isa = PBXGroup;
+			children = (
+				74CAF621287B6D0C00728B56 /* CustomTitleTextField.swift */,
+				74CAF624287B6D2800728B56 /* CustomTitleTextField.xib */,
+			);
+			path = CustomTitleTextField;
 			sourceTree = "<group>";
 		};
 		74DFE94E286DC7E600F2C96B /* MainViewController */ = {
@@ -335,9 +366,11 @@
 				43011A26286A345800016C49 /* LaunchScreen.storyboard in Resources */,
 				43011A34286A34AA00016C49 /* Colors.xcassets in Resources */,
 				43011A38286A35FF00016C49 /* OnboardingViewController.xib in Resources */,
+				74CAF620287B6C4B00728B56 /* TodoListViewController.xib in Resources */,
 				438F5AE6286CD79A00164978 /* ProfilePopupViewController.xib in Resources */,
 				43011A23286A345800016C49 /* Assets.xcassets in Resources */,
 				43011A55286CA4B300016C49 /* CustomTopBar.xib in Resources */,
+				74CAF625287B6D2800728B56 /* CustomTitleTextField.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +385,7 @@
 				43011A1A286A345600016C49 /* AppDelegate.swift in Sources */,
 				43011A43286A371E00016C49 /* Optional+Extension.swift in Sources */,
 				43011A5B286CAA8500016C49 /* UIView+Extension.swift in Sources */,
+				74CAF61F287B6C4B00728B56 /* TodoListViewController.swift in Sources */,
 				43011A57286CA53800016C49 /* UIImageView+Extension.swift in Sources */,
 				438F5AE5286CD79A00164978 /* ProfilePopupViewController.swift in Sources */,
 				43011A37286A35FF00016C49 /* OnboardingViewController.swift in Sources */,
@@ -359,9 +393,11 @@
 				437E6B15286D017400B7F28E /* UserProfile.swift in Sources */,
 				43011A3C286A36DE00016C49 /* OnboardingCell.swift in Sources */,
 				43011A47286A397400016C49 /* OnboardingViewModel.swift in Sources */,
+				74CAF61B287B6AB000728B56 /* ProfilePopupViewModel.swift in Sources */,
 				43011A4B286A49E500016C49 /* Onboarding.swift in Sources */,
 				43011A42286A371E00016C49 /* CustomXib.swift in Sources */,
 				43011A49286A3EB700016C49 /* UICollectionView+Extension.swift in Sources */,
+				74CAF622287B6D0C00728B56 /* CustomTitleTextField.swift in Sources */,
 				43011A1C286A345600016C49 /* SceneDelegate.swift in Sources */,
 				43011A44286A371E00016C49 /* NSObject+Extension.swift in Sources */,
 				43011A45286A371E00016C49 /* UIColor+Extension.swift in Sources */,
